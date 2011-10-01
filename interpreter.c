@@ -23,12 +23,11 @@ void interpret(int place, FILE * brain) {
     operator[2] = '\0';
     
     
-    // get x1, x2, and then calculate a
-    x1 = (int)BrainMachine.MainMemory[place][2];
-    x2 = (int)BrainMachine.MainMemory[place][3];
+    // get x1, x2 and convert to ascii integer, then subtract
+    // 48 to get the true integer.  then calculate a
+    x1 = (int)BrainMachine.MainMemory[place][2] - 48;
+    x2 = (int)BrainMachine.MainMemory[place][3] - 48;
     a = (10 * x1) + x2;
-    
-    printf("%s\n", operator);
     
     // start comparing and interpreting
     if( strcmp("LR", operator) == 0) {

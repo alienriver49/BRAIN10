@@ -13,4 +13,11 @@
 Brain BrainMachine;
 
 void initializeBrain() {
+    BrainMachine.REGISTER = 0;
+    BrainMachine.STACK_POINTER = 0;
+    BrainMachine.BASE_REGISTER = 0;
+    BrainMachine.LIMIT_REGISTER = 100;
+    
+    BrainMachine.IC = 0;
+    BrainMachine.BOOL_SWITCH = 0;
 }

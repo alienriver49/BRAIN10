@@ -54,7 +54,6 @@ void storeData(int bound, FILE * file ) {
     for( i = 0 ; i < 10 ; i++) {
         c = fgetc(file);
         
-        BrainMachine.MainMemory[bound][0] = c;
-        printf("%c", c);
+        BrainMachine.MainMemory[bound+i][0] = c;
     }
 }

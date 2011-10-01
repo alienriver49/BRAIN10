@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
     
     // If the BRAIN file exists
     if( BRAIN ) {
+        initializeBrain();
         
         storeInstr( BRAIN );
         
